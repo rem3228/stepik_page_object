@@ -30,15 +30,15 @@ class ProductPage(BasePage):
         return self.browser.find_elements(*ProductPageLocators.BASKET_SUCCESS_ALERTS)[0].text
 
     def get_basket_product_price(self):
-        return " ".join(self.browser.find_element(*ProductPageLocators.BASKET).text.split()[:3])
+        return self.browser.find_element(*ProductPageLocators.BASKET).text.split()[2]
 
 
     def should_be_product_price_equal_to_product_price_in_basket(self):
         print(self.get_basket_product_price())
-        assert self.get_product_price() in self.get_basket_product_price() \
+        assert self.get_product_price() == self.get_basket_product_price() \
             , "Product price not equal to product price in basket"
 
     def should_be_product_name_in_basket_success_alerts(self):
         print(self.get_basket_success_alert())
-        assert self.get_product_name() in self.get_basket_success_alert() \
+        assert self.get_product_name() == self.get_basket_success_alert() \
                ,"Product not added to basket"

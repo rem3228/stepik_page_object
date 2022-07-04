@@ -14,5 +14,5 @@ class ProductPageLocators():
     ADD_TO_BASKET_BUTTON = (By.XPATH, "//button[contains(@class, 'basket')]")
     PRODUCT_NAME = (By.XPATH, "//div[contains(@class, 'product_main')]/h1")
     PRODUCT_PRICE = (By.XPATH, "//p[contains(@class, 'price_color')]")
-    BASKET_SUCCESS_ALERTS = (By.XPATH, "//div[contains(@class, 'alert-success')]/div[contains(@class, 'alertinner')]")
+    BASKET_SUCCESS_ALERTS = (By.XPATH, "//div[contains(@class, 'alert-success')]/div[contains(@class, 'alertinner')]/strong")
     BASKET = (By.XPATH, "//div[contains(@class, 'basket')]")
