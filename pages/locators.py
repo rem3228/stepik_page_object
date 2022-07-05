@@ -16,3 +16,7 @@ class ProductPageLocators():
     PRODUCT_PRICE = (By.XPATH, "//p[contains(@class, 'price_color')]")
     BASKET_SUCCESS_ALERTS = (By.XPATH, "//div[contains(@class, 'alert-success')]/div[contains(@class, 'alertinner')]/strong")
     BASKET = (By.XPATH, "//div[contains(@class, 'basket')]")
+
+class BasePageLocators():
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
